@@ -2,11 +2,11 @@ from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
 from rest_framework.serializers import CurrentUserDefault
 from rest_framework.validators import UniqueTogetherValidator, ValidationError
-
-from .validators import UsernameNotMeValidator
 from reviews.models import Comment, Review
 from titles.models import Category, Genre, Title
 from users.models import User
+
+from .validators import UsernameNotMeValidator
 
 
 class SignUpSerializer(serializers.ModelSerializer):
